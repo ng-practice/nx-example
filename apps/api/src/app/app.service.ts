@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
+import { Product } from '@sc-sport-is-awesome/domain';
 
 @Injectable()
 export class AppService {
-  getData(): { message: string } {
-    return ({ message: 'Welcome to api!' });
+  getData(): Product[] {
+    return [];
   }
 }

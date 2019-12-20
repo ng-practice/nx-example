@@ -82,3 +82,30 @@ Run `nx dep-graph` to see a diagram of the dependencies of your projects.
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
+
+
+Steps:
+
+```bash
+npx create-nx-workspace sc-sport-is-awesome
+npx: installed 167 in 37.04s
+? What to create in the new workspace angular           [a workspace with a single Angular application]
+? Application name                    fanshop
+? Default stylesheet format           SASS(.scss)  [ http://sass-lang.com   ]
+```
+
+```bash
+ng add @nrwl/nest
+
+ng generate @nrwl/nest:application --name=api --frontendProject=fanshop 
+
+? In which directory should the node application be generated? 
+```
+Updated/Added:
+* [a] apps/api
+* [m] apps/fanshop/proxy.conf.json
+
+```bash
+ng generate @nrwl/workspace:library --name=domain
+```
+
