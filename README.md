@@ -109,3 +109,40 @@ Updated/Added:
 ng generate @nrwl/workspace:library --name=domain
 ```
 
+* add Product class
+  * use it in api
+
+```bash
+yarn affected:dep-graph
+```
+
+```bash
+ng generate @schematics/angular:module --name=shop --project=fanshop
+```
+
+```
+ng g module shop --project=fanshop
+ng g component product-list --project=fanshop
+```
+
+* add array of Product to product-list
+* *no commit*
+```bash
+yarn affected:lint
+nx affected:lint
+
+> Affected criteria defaulted to --base=master --head=HEAD
+
+
+> Running target lint for projects:
+
+  - fanshop  <--
+  - fanshop-e2e <--
+```
+
+```bash
+yarn affected:dep-graph
+```
+
+* verify changed dependencies
+* verfiy modified libraries/apps
