@@ -16,7 +16,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@sc-sport-is-awesome/domain": ["libs/domain/src/index.ts"]
+      "@sc-sport-is-awesome/domain": ["libs/domain/src/index.ts"],
+      "@sc-sport-is-awesome/ui-components": ["libs/ui-components/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -60,3 +60,58 @@ yarn affected:dep-graph
 
 * verify changed dependencies
 * verfiy modified libraries/apps
+
+```bash
+ng generate @nrwl/angular:library --name=ui-components --style=scss --prefix=uic
+```
+
+```js
+//nx.json
+
+"projects": {
+    "fanshop-e2e": {
+      "tags": ["cypress", "fanshop"]
+    },
+    "fanshop": {
+      "tags": ["fanshop"]
+    },
+    "api": {
+      "tags": ["api"]
+    },
+    "domain": {
+      "tags": ["domain"]
+    },
+    "ui-components": {
+      "tags": ["ui-components"]
+    }
+  }
+
+// tslint.json
+"depConstraints": [
+          {
+            "sourceTag": "domain",
+            "onlyDependOnLibsWithTags": []
+          },
+          {
+            "sourceTag": "ui-compoents", 
+            "onlyDependOnLibsWithTags": []
+          }
+        ]
+```
+
+```bash
+ng g c list-item --project=ui-components
+```
+
+```ts
+//list-item.component.ts
+...
+@Input() item: Product;
+...
+```
+
+```
+yarn affected:lint
+
+ERROR: A project tagged with "scope:ui-components" can only depend on libs tagged with "scope:ui-components"
+```

@@ -9,16 +9,19 @@
   },
   "projects": {
     "fanshop-e2e": {
-      "tags": []
+      "tags": ["scope:cypress", "scope:fanshop"]
     },
     "fanshop": {
-      "tags": []
+      "tags": ["scope:fanshop"]
     },
     "api": {
-      "tags": []
+      "tags": ["scope:api"]
     },
     "domain": {
-      "tags": []
+      "tags": ["scope:domain"]
+    },
+    "ui-components": {
+      "tags": ["scope:ui-components"]
     }
   }
 }

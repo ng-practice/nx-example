@@ -56,8 +56,20 @@
         "allow": [],
         "depConstraints": [
           {
-            "sourceTag": "*",
-            "onlyDependOnLibsWithTags": ["*"]
+            "sourceTag": "scope:api",
+            "onlyDependOnLibsWithTags": ["scope:domain"]
+          },
+          {
+            "sourceTag": "scope:fanshop", 
+            "onlyDependOnLibsWithTags": ["scope:domain", "scope:ui-components"]
+          },
+          {
+            "sourceTag": "scope:domain",
+            "onlyDependOnLibsWithTags": ["scope:domain"]
+          },
+          {
+            "sourceTag": "scope:ui-components",
+            "onlyDependOnLibsWithTags": ["scope:ui-components"]
           }
         ]
       }
