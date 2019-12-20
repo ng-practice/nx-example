@@ -1,0 +1,7 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [true, "attribute", "scSportIsAwesome", "camelCase"],
+    "component-selector": [true, "element", "sc-sport-is-awesome", "kebab-case"]
+  }
+}
